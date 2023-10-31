@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create WebSite With Validation&Registration JS Coding Nepal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <header>
+        <nav>
+          <div class="logo">
+            <a href="#">CodingKimo</a>
+          </div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="btn">
+            <button id="login">Login</button>
+          </div>
+        </nav>
+      </header>
+      <section>
+        <article class="login">
+          <i class="fa-solid fa-xmark close"></i>
+          <h3>Login</h3>
+          <form action="">
+            <div class="email">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="Enter Your Email" />
+            </div>
+            <div class="password">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="Enter Your Password" />
+              <i class="fa-regular fa-eye-slash slash"></i>
+            </div>
+            <div class="remenber_pass">
+              <div class="remenber_me">
+                <input type="checkbox" id="check" />
+                <label for="check">Remenber Me</label>
+              </div>
+              <div class="forgot">
+                <a href="#">Forgot Password ?</a>
+              </div>
+            </div>
+            <button class="login_now">Login Now</button>
+            <p>Don't Have on Account? <a href="#" class="signup">Sign_up</a></p>
+          </form>
+        </article>
+
+        <article class="login logout">
+          <i class="fa-solid fa-xmark close"></i>
+          <h3>Signup</h3>
+          <form action="">
+            <div class="email">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="Enter Your Email" />
+            </div>
+            <div class="password">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="Enter Your Password" />
+              <i class="fa-regular fa-eye-slash slash"></i>
+            </div>
+            <div class="password">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="Confirm Your Password" />
+              <i class="fa-regular fa-eye-slash slash"></i>
+            </div>
+            <button class="login_now">Signup Now</button>
+            <p>Already Have on Account? <a href="#" class="signin">Login</a></p>
+          </form>
+        </article>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d575fe1d69.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

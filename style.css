@@ -1,0 +1,219 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: auto 1fr / repeat(5, 1fr);
+}
+
+.container .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  display: none;
+}
+
+.container .overlay.show {
+  display: block;
+}
+
+header {
+  grid-area: 1 / 1 / 2 / 6;
+}
+
+section {
+  grid-area: 2 / 1 / 3 / 6;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 10px 45px;
+  /* background-color: red; */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  z-index: 21;
+}
+
+nav {
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo a {
+  font-size: 1.2rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+}
+
+nav #login {
+  padding: 5px 12px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #111;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+nav #login:hover {
+  background-color: #fff;
+}
+
+section {
+  background: url("imgs/pc_apple.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 12px;
+  position: relative;
+  display: none;
+  z-index: 20;
+}
+
+.login.show {
+  display: block;
+}
+
+.login .close {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 16.5px;
+  position: absolute;
+  right: 25px;
+  cursor: pointer;
+  padding: 4px;
+  transition: 0.3s;
+  background-color: #f50;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.login .close:hover {
+  opacity: 0.7;
+}
+
+.login h3 {
+  margin: 25px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form .email input,
+form .password input {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 35px;
+}
+
+.email,
+.password {
+  position: relative;
+}
+
+.email i,
+.password i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.password i:last-child {
+  right: 10px;
+}
+
+.remenber_pass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.remenber_me {
+  display: flex;
+  gap: 5px;
+}
+
+.remenber_me input {
+  accent-color: blue;
+}
+
+.login_now {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: blue;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 10px;
+}
+
+form p {
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logout {
+  display: none;
+  z-index: 20;
+}
+
+.logout.show {
+  display: block;
+}
